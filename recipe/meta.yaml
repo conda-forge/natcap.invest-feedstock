@@ -6,12 +6,16 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/natcap/invest/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 0d9ce7ab5a9184c1cfcb2d2ec8295216e163b61e979b6bba3246342400945bdb
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 4d9bc9ee1e3b52ecf833a3aceb7d71d3f3c1a9adc660947490c52fc2fe3901a8
 
 build:
-  number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 1
+  script:
+    - "{{ PYTHON }} -m build --wheel --no-isolation"
+    - "{{ PYTHON }} -m build --sdist --no-isolation"
+    - "{{ PYTHON }} -m pip install --no-deps --no-index --only-binary natcap.invest --find-links=dist \"natcap.invest=={{ version }}\""
+
 
 requirements:
   build:
@@ -22,6 +26,10 @@ requirements:
     - babel
     - cython
     - numpy
+    - setuptools_scm
+    - setuptools
+    - wheel
+    - build
   run:
     - python
     - babel
