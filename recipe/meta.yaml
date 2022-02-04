@@ -10,7 +10,7 @@ source:
   sha256: 4d9bc9ee1e3b52ecf833a3aceb7d71d3f3c1a9adc660947490c52fc2fe3901a8
 
 build:
-  number: 1
+  number: 2
   script:
     - "{{ PYTHON }} -m build --wheel --no-isolation"
     - "{{ PYTHON }} -m build --sdist --no-isolation"
