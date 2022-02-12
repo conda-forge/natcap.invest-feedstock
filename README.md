@@ -199,4 +199,6 @@ Feedstock Maintainers
 =====================
 
 * [@TnTo](https://github.com/TnTo/)
+* [@dcdenu4](https://github.com/dcdenu4/)
+* [@phargogh](https://github.com/phargogh/)
 

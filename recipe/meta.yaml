@@ -1,5 +1,5 @@
 {% set name = "natcap.invest" %}
-{% set version = "3.10.1" %}
+{% set version = "3.10.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4d9bc9ee1e3b52ecf833a3aceb7d71d3f3c1a9adc660947490c52fc2fe3901a8
+  sha256: 964eb5d5af819effa7234471e40624cf4f6b55cb29e58c386e4a55d2f935e5b8
 
 build:
-  number: 1
+  number: 0
   script:
-    - "{{ PYTHON }} -m build --wheel --no-isolation"
-    - "{{ PYTHON }} -m build --sdist --no-isolation"
-    - "{{ PYTHON }} -m pip install --no-deps --no-index --only-binary natcap.invest --find-links=dist \"natcap.invest=={{ version }}\""
+    - {{ PYTHON }} -m build --wheel --no-isolation -x
+    - {{ PYTHON }} -m build --sdist --no-isolation -x
+    - {{ PYTHON }} -m pip install --no-deps --no-index --only-binary natcap.invest --find-links=dist "natcap.invest=={{ version }}"
 
 
 requirements:
@@ -33,15 +33,15 @@ requirements:
   run:
     - python
     - babel
-    - chardet >=3.0.4   
-    - cython 
+    - chardet >=3.0.4
+    - cython
     - gdal >=3.1.2,!=3.3.0
     - flask
-    - numpy >=1.11.0,!=1.16.0,<1.22.0
+    - numpy >=1.11.0,!=1.16.0
     - {{ pin_compatible('numpy') }}
     - openpyxl
-    - pandas >=1.2.1  
-    - pint    
+    - pandas >=1.2.1
+    - pint
     - psutil >=5.6.6
     - pygeoprocessing >=2.3.2
     - pyro4 ==4.77
@@ -50,10 +50,10 @@ requirements:
     - qtpy >1.3
     - requests
     - rtree >=0.8.2,!=0.9.1
-    - scipy >=1.6.0
+    - scipy >=1.6.0,<1.8.0
     - shapely >=1.7.1,<2.0.0
     - taskgraph >=0.11.0
-    
+
 test:
   imports:
     - natcap.invest
