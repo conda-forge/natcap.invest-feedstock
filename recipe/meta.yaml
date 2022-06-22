@@ -31,7 +31,7 @@ requirements:
     - wheel
     - build
   run:
-    - python >=3.8
+    - python
     - babel
     - chardet >=3.0.4
     - cython
