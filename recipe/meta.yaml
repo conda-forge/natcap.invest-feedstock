@@ -31,12 +31,14 @@ requirements:
     - wheel
     - build
   run:
-    - python
+    - python >=3.8
     - babel
     - chardet >=3.0.4
     - cython
     - gdal >=3.1.2,!=3.3.0
     - flask
+    - flask_cors
+    - six
     - numpy >=1.11.0,!=1.16.0
     - {{ pin_compatible('numpy') }}
     - openpyxl
