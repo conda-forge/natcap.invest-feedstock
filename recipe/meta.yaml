@@ -10,7 +10,7 @@ source:
   sha256: b967d2a9737d671259db5ca29c6da58150c4a36d866ff236ad6275708621d145
 
 build:
-  skip: True # [py37]
+  skip: True  # [py==37]
   number: 0
   script:
     - {{ PYTHON }} -m build --wheel --no-isolation -x
