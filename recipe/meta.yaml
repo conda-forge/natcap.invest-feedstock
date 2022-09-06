@@ -1,5 +1,5 @@
 {% set name = "natcap.invest" %}
-{% set version = "3.11.0" %}
+{% set version = "3.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b967d2a9737d671259db5ca29c6da58150c4a36d866ff236ad6275708621d145
+  sha256: 92b5b4a874d024892d15b529d60bd2a788628bada89a547ac5bdde4aadf9b6b1
 
 build:
-  skip: True  # [py==37]
+  skip: true  # [py==37]
   number: 0
   script:
     - {{ PYTHON }} -m build --wheel --no-isolation -x
@@ -36,13 +36,14 @@ requirements:
     - babel
     - chardet >=3.0.4
     - cython
-    - gdal >=3.1.2,!=3.3.0,<3.4.1
+    - gdal >=3.4.2
     - flask
     - flask_cors
     - six
     - numpy >=1.11.0,!=1.16.0
     - {{ pin_compatible('numpy') }}
     - openpyxl
+    - xlrd
     - pandas >=1.2.1
     - pint
     - psutil >=5.6.6
@@ -53,8 +54,8 @@ requirements:
     - qtpy >1.3
     - requests
     - rtree >=0.8.2,!=0.9.1
-    - scipy >=1.6.0,<1.9.0
-    - shapely >=1.7.1,<1.8.2,<2.0.0
+    - scipy >=1.9.0
+    - shapely >=1.7.1,<1.8.2
     - taskgraph >=0.11.0
 
 test:
