@@ -1,5 +1,5 @@
 {% set name = "natcap.invest" %}
-{% set version = "3.12.0" %}
+{% set version = "3.12.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 92b5b4a874d024892d15b529d60bd2a788628bada89a547ac5bdde4aadf9b6b1
+  sha256: d25bcde6812f0f9ac8c55e6f20c35ba4842ff473f230c470251b6a595a3b81ef
 
 build:
   skip: true  # [py==37]
-  number: 1
+  number: 0
   script:
     - {{ PYTHON }} -m build --wheel --no-isolation -x
     - {{ PYTHON }} -m build --sdist --no-isolation -x
