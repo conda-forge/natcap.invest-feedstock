@@ -1,11 +1,11 @@
-About natcap.invest
-===================
+About natcap.invest-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/natcap.invest-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/natcap/invest
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/natcap.invest-feedstock/blob/main/LICENSE.txt)
 
 Summary: InVEST: models that map and value the goods and services from nature that sustain and fulfill human life.
 
