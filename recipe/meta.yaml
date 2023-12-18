@@ -40,7 +40,7 @@ requirements:
     - babel
     - chardet >=3.0.4
     - cython
-    - gdal >=3.4.2,<3.7.0
+    - gdal >=3.4.2,<3.6.0
     - flask
     - flask_cors
     - six
@@ -51,12 +51,12 @@ requirements:
     - pandas >=1.2.1
     - pint
     - psutil >=5.6.6
-    - pygeoprocessing ==2.4.0
+    - pygeoprocessing >=2.4.2
     - pyro4 ==4.77
     - requests
     - rtree >=0.8.2,!=0.9.1
     - scipy >=1.9.0
-    - shapely >=1.7.1,<1.8.2
+    - shapely >=2.0.0
     - taskgraph >=0.11.0
 
 test:
