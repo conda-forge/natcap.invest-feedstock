@@ -29,7 +29,7 @@ requirements:
     - python
     - pip
     - babel
-    - cython <3.0.0
+    - cython
     - numpy
     - setuptools_scm
     - setuptools
