@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [py==37]
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} -m build --wheel --no-isolation -x
     - {{ PYTHON }} -m build --sdist --no-isolation -x
@@ -25,6 +25,7 @@ requirements:
     - cython <3.0.0                          # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
