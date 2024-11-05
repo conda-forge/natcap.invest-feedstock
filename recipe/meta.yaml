@@ -31,7 +31,7 @@ requirements:
     - pip
     - babel
     - cython <3.0.0
-    - numpy
+    - numpy  <2
     - setuptools_scm
     - setuptools
     - wheel
@@ -47,7 +47,6 @@ requirements:
     - flask-cors
     - six
     - numpy >=1.11.0,!=1.16.0,<2
-    - {{ pin_compatible('numpy') }}
     - openpyxl
     - xlrd
     - pandas >=1.2.1
