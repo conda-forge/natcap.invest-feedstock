@@ -1,13 +1,13 @@
 {% set name = "natcap.invest" %}
-{% set version = "3.14.1" %}
+{% set version = "3.14.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 23e470fc6288aa6ae8bc83e366223ac9a09321415b94b98be1cfe6281c51b86d
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace(".", "_") }}-{{ version }}.tar.gz
+  sha256: 97415870f7e05507700b47052c71aad29f75957221aa29265c18b6eb82a923b4
 
 build:
   skip: true  # [py==37]
@@ -22,15 +22,16 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython <3.0.0                          # [build_platform != target_platform]
-    - numpy                                  # [build_platform != target_platform]
+    - cython >3.0.0                          # [build_platform != target_platform]
+    - numpy  <2                              # [build_platform != target_platform]
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
     - babel
-    - cython <3.0.0
-    - numpy
+    - cython >3.0.0
+    - numpy  <2
     - setuptools_scm
     - setuptools
     - wheel
@@ -39,13 +40,13 @@ requirements:
     - python
     - babel
     - chardet >=3.0.4
-    - cython <3.0.0
-    - gdal >=3.4.2,<3.6.0
+    - cython >3.0.0
+    - gdal >=3.4.2,<3.6.0  # [py<312]
+    - gdal <=3.8            # [py==312]
     - flask
-    - flask_cors
+    - flask-cors
     - six
-    - numpy >=1.11.0,!=1.16.0
-    - {{ pin_compatible('numpy') }}
+    - numpy >=1.11.0,!=1.16.0,<2
     - openpyxl
     - xlrd
     - pandas >=1.2.1
