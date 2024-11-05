@@ -30,7 +30,7 @@ requirements:
     - python
     - pip
     - babel
-    - cython <3.0.0
+    - cython >3.0.0
     - numpy  <2
     - setuptools_scm
     - setuptools
@@ -40,7 +40,7 @@ requirements:
     - python
     - babel
     - chardet >=3.0.4
-    - cython <3.0.0
+    - cython >3.0.0
     - gdal >=3.4.2,<3.6.0  # [py<312]
     - gdal <=3.8            # [py==312]
     - flask
