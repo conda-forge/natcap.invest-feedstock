@@ -23,7 +23,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython >3.0.0                          # [build_platform != target_platform]
-    - numpy  <2.0dev0                        # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
   host:
@@ -46,13 +46,13 @@ requirements:
     - flask
     - flask-cors
     - six
-    - numpy >=1.11.0,!=1.16.0,<2.0dev0
+    - numpy >=1.11.0,!=1.16.0
     - openpyxl
     - xlrd
     - pandas >=1.2.1
     - pint
     - psutil >=5.6.6
-    - pygeoprocessing >=2.4.2
+    - pygeoprocessing >=2.4.6
     - pyro4 ==4.77
     - requests
     - rtree >=0.8.2,!=0.9.1
