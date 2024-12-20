@@ -31,7 +31,7 @@ requirements:
     - pip
     - babel
     - cython >3.0.0
-    - numpy  <2.0dev0
+    - numpy
     - setuptools_scm
     - setuptools
     - wheel
