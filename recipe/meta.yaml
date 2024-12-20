@@ -1,5 +1,5 @@
 {% set name = "natcap.invest" %}
-{% set version = "3.14.2" %}
+{% set version = "3.14.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace(".", "_") }}-{{ version }}.tar.gz
-  sha256: 97415870f7e05507700b47052c71aad29f75957221aa29265c18b6eb82a923b4
+  sha256: 45a8b3e565108c3b287aeb00cbaade251e7ffd6a5b9f96c5c43c3fd01bf3a228
 
 build:
   skip: true  # [py==37]
-  number: 1
+  number: 0
   script:
     - {{ PYTHON }} -m build --wheel --no-isolation -x
     - {{ PYTHON }} -m build --sdist --no-isolation -x
@@ -23,7 +23,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython >3.0.0                          # [build_platform != target_platform]
-    - numpy  <2.0dev0                        # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
   host:
@@ -31,7 +31,7 @@ requirements:
     - pip
     - babel
     - cython >3.0.0
-    - numpy  <2.0dev0
+    - numpy
     - setuptools_scm
     - setuptools
     - wheel
@@ -46,13 +46,13 @@ requirements:
     - flask
     - flask-cors
     - six
-    - numpy >=1.11.0,!=1.16.0,<2.0dev0
+    - numpy >=1.11.0,!=1.16.0
     - openpyxl
     - xlrd
     - pandas >=1.2.1
     - pint
     - psutil >=5.6.6
-    - pygeoprocessing >=2.4.2
+    - pygeoprocessing >=2.4.6
     - pyro4 ==4.77
     - requests
     - rtree >=0.8.2,!=0.9.1
