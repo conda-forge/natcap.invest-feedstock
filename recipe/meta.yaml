@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [py==37]
-  number: 1
+  number: 2
   script:
     - {{ PYTHON }} -m build --wheel --no-isolation -x
     - {{ PYTHON }} -m build --sdist --no-isolation -x
@@ -41,14 +41,10 @@ requirements:
     - babel
     - chardet >=3.0.4
     - cython >3.0.0
-    - gdal >=3.4.2,<3.6.0  # [py<312]
-    - gdal <=3.8           # [py==312]
+    - gdal >=3.4.2
     - flask
     - flask-cors
-    - six
     - numpy >=1.11.0,!=1.16.0
-    - openpyxl
-    - xlrd
     - pandas >=1.2.1
     - pint
     - psutil >=5.6.6
@@ -83,3 +79,4 @@ extra:
   recipe-maintainers:
     - dcdenu4
     - phargogh
+    - davemfish
