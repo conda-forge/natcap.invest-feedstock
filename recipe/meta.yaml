@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [py==37]
-  number: 2
+  number: 3
   script:
     - {{ PYTHON }} -m build --wheel --no-isolation -x
     - {{ PYTHON }} -m build --sdist --no-isolation -x
@@ -38,6 +38,8 @@ requirements:
     - python-build
   run:
     - python
+    - libsqlite <3.49.1  # https://github.com/conda-forge/sqlite-feedstock/issues/130
+    - sqlite <3.49.1     # https://github.com/conda-forge/sqlite-feedstock/issues/130
     - babel
     - chardet >=3.0.4
     - cython >3.0.0
