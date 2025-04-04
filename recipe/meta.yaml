@@ -36,7 +36,7 @@ requirements:
     - cython >3.0.0
     - numpy
     - setuptools_scm
-    - setuptools>=77.0  # For PEP 639 license syntax update
+    - setuptools >=77.0  # For PEP 639 license syntax update
     - wheel
     - python-build
   run:
