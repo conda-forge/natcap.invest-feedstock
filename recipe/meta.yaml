@@ -12,8 +12,6 @@ source:
 build:
   skip: true  # [py==37]
   number: 0
-  script_env:
-    - NATCAP_INVEST_GDAL_LIB_PATH="$CONDA_PREFIX/Library"
   script:
     - {{ PYTHON }} -m build --wheel --no-isolation -x
     - {{ PYTHON }} -m build --sdist --no-isolation -x
