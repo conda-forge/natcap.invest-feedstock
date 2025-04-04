@@ -1,5 +1,5 @@
 {% set name = "natcap.invest" %}
-{% set version = "3.14.3" %}
+{% set version = "3.15.0" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,9 @@ source:
 
 build:
   skip: true  # [py==37]
-  number: 3
+  number: 0
+  script_env:
+    - NATCAP_INVEST_GDAL_LIB_PATH="$LIBRARY_PREFIX"
   script:
     - {{ PYTHON }} -m build --wheel --no-isolation -x
     - {{ PYTHON }} -m build --sdist --no-isolation -x
