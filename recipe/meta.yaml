@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [py==37]
-  number: 0
+  number: 1
   script_env:
     - NATCAP_INVEST_GDAL_LIB_PATH={{ CONDA_PREFIX }}/Library
   script:
@@ -61,6 +61,8 @@ requirements:
     - scipy >=1.9.0
     - shapely >=2.0.0
     - taskgraph >=0.11.0
+  entry_points:
+    - invest = natcap.invest.cli:main
 
 test:
   imports:
@@ -69,6 +71,7 @@ test:
     - pip
   commands:
     - pip check
+    - invest list
 
 about:
   home: https://github.com/natcap/invest
