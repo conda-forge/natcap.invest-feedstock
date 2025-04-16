@@ -18,7 +18,8 @@ build:
     - {{ PYTHON }} -m build --wheel --no-isolation -x
     - {{ PYTHON }} -m build --sdist --no-isolation -x
     - {{ PYTHON }} -m pip install --no-deps --no-index --only-binary natcap.invest --find-links=dist "natcap.invest=={{ version }}"
-
+  entry_points:
+    - invest = natcap.invest.cli:main
 
 requirements:
   build:
@@ -61,8 +62,6 @@ requirements:
     - scipy >=1.9.0
     - shapely >=2.0.0
     - taskgraph >=0.11.0
-  entry_points:
-    - invest = natcap.invest.cli:main
 
 test:
   imports:
