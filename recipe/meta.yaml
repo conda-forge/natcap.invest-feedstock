@@ -11,14 +11,15 @@ source:
 
 build:
   skip: true  # [py==37]
-  number: 0
+  number: 1
   script_env:
     - NATCAP_INVEST_GDAL_LIB_PATH={{ CONDA_PREFIX }}/Library
   script:
     - {{ PYTHON }} -m build --wheel --no-isolation -x
     - {{ PYTHON }} -m build --sdist --no-isolation -x
     - {{ PYTHON }} -m pip install --no-deps --no-index --only-binary natcap.invest --find-links=dist "natcap.invest=={{ version }}"
-
+  entry_points:
+    - invest = natcap.invest.cli:main
 
 requirements:
   build:
@@ -69,6 +70,7 @@ test:
     - pip
   commands:
     - pip check
+    - invest list
 
 about:
   home: https://github.com/natcap/invest
