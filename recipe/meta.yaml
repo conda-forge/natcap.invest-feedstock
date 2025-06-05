@@ -22,6 +22,9 @@ build:
     - {{ PYTHON }} -m pip install --no-deps --no-index --only-binary natcap.invest --find-links=dist "natcap.invest=={{ version }}"
   entry_points:
     - invest = natcap.invest.cli:main
+  run_exports:
+    strong:
+      gdal
 
 requirements:
   build:
