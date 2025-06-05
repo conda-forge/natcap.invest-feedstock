@@ -37,7 +37,7 @@ requirements:
     - babel
     - cython >3.0.0
     - gdal >=3.4.2
-    - numpy >=1.11.0,!=1.16.0
+    - numpy
     - setuptools_scm
     - setuptools >=77.0  # For PEP 639 license syntax update
     - wheel
@@ -46,10 +46,13 @@ requirements:
     - python
     - libsqlite <3.49.1  # https://github.com/conda-forge/sqlite-feedstock/issues/130
     - sqlite <3.49.1     # https://github.com/conda-forge/sqlite-feedstock/issues/130
+    - babel
     - chardet >=3.0.4
+    - cython >3.0.0
     - flask
     - flask-cors
     - geometamaker
+    - numpy >=1.11.0,!=1.16.0
     - pandas >=1.2.1
     - pint
     - psutil >=5.6.6
