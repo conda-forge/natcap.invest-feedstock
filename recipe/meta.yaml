@@ -32,20 +32,18 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
   host:
-    run_exports:
-      weak:
-        - pip
-        - babel
-        - setuptools_scm
-        - setuptools >=77.0  # For PEP 639 license syntax update
-        - wheel
-        - python-build
-      strong:
-        - python
-        - cython >3.0.0
-        - gdal >=3.4.2
-        - numpy >=1.11.0,!=1.16.0
+    - python
+    - pip
+    - babel
+    - cython >3.0.0
+    - gdal >=3.4.2
+    - numpy >=1.11.0,!=1.16.0
+    - setuptools_scm
+    - setuptools >=77.0  # For PEP 639 license syntax update
+    - wheel
+    - python-build
   run:
+    - python
     - libsqlite <3.49.1  # https://github.com/conda-forge/sqlite-feedstock/issues/130
     - sqlite <3.49.1     # https://github.com/conda-forge/sqlite-feedstock/issues/130
     - chardet >=3.0.4
