@@ -40,7 +40,6 @@ requirements:
         - setuptools >=77.0  # For PEP 639 license syntax update
         - wheel
         - python-build
-    run_exports:
       strong:
         - python
         - cython >3.0.0
