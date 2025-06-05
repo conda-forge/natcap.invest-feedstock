@@ -36,21 +36,16 @@ requirements:
     - pip
     - babel
     - cython >3.0.0
+    - gdal >=3.4.2
     - numpy
     - setuptools_scm
     - setuptools >=77.0  # For PEP 639 license syntax update
     - wheel
     - python-build
-    run_exports:
-      strong:
-        - gdal >=3.4.2
   run:
-    - python
     - libsqlite <3.49.1  # https://github.com/conda-forge/sqlite-feedstock/issues/130
     - sqlite <3.49.1     # https://github.com/conda-forge/sqlite-feedstock/issues/130
-    - babel
     - chardet >=3.0.4
-    - cython >3.0.0
     - flask
     - flask-cors
     - geometamaker
