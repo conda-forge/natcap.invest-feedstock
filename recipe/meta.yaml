@@ -23,8 +23,7 @@ build:
   entry_points:
     - invest = natcap.invest.cli:main
   run_exports:
-    strong:
-      gdal
+    - gdal
 
 requirements:
   build:
