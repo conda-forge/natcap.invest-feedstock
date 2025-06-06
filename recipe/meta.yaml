@@ -22,8 +22,6 @@ build:
     - {{ PYTHON }} -m pip install --no-deps --no-index --only-binary natcap.invest --find-links=dist "natcap.invest=={{ version }}"
   entry_points:
     - invest = natcap.invest.cli:main
-  run_exports:
-    - gdal
 
 requirements:
   build:
@@ -38,7 +36,7 @@ requirements:
     - pip
     - babel
     - cython >3.0.0
-    - gdal >=3.4.2
+    - libgdal-core
     - numpy
     - setuptools_scm
     - setuptools >=77.0  # For PEP 639 license syntax update
