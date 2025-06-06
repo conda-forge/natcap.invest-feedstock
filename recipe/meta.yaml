@@ -1,5 +1,5 @@
 {% set name = "natcap.invest" %}
-{% set version = "3.15.1" %}
+{% set version = "3.16.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace(".", "_") }}-{{ version }}.tar.gz
-  sha256: 9f708a3ba8dbce5d5abb4328acc0782e9cf223db3937fdf312f965c27d223142
+  sha256: 9fca4ddea742f1206c8fd59e71522aab67f4b5e63e88a0afc8f051d00dfeb193
+  patches:
+    - catch_import_error.patch
 
 build:
   skip: true  # [py==37]
-  number: 1
+  number: 0
   script_env:
     - NATCAP_INVEST_GDAL_LIB_PATH={{ CONDA_PREFIX }}/Library
   script:
@@ -34,7 +36,7 @@ requirements:
     - pip
     - babel
     - cython >3.0.0
-    - gdal >=3.4.2
+    - libgdal-core
     - numpy
     - setuptools_scm
     - setuptools >=77.0  # For PEP 639 license syntax update
@@ -42,12 +44,11 @@ requirements:
     - python-build
   run:
     - python
-    - libsqlite <3.49.1  # https://github.com/conda-forge/sqlite-feedstock/issues/130
-    - sqlite <3.49.1     # https://github.com/conda-forge/sqlite-feedstock/issues/130
+    - libsqlite !=3.49.1  # https://github.com/conda-forge/sqlite-feedstock/issues/130
+    - sqlite !=3.49.1     # https://github.com/conda-forge/sqlite-feedstock/issues/130
     - babel
     - chardet >=3.0.4
     - cython >3.0.0
-    - gdal >=3.4.2
     - flask
     - flask-cors
     - geometamaker
