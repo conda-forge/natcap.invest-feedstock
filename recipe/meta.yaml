@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace(".", "_") }}-{{ version }}.tar.gz
   sha256: eb7442e0da22ea4849c84c55514962123b200dc0ec62fa0a7b85abd211f8bd5c
-  patches:
-    - catch_import_error.patch
 
 build:
   skip: true  # [py==37]
