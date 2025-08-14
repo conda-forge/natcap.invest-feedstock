@@ -374,5 +374,6 @@ Feedstock Maintainers
 
 * [@davemfish](https://github.com/davemfish/)
 * [@dcdenu4](https://github.com/dcdenu4/)
+* [@emlys](https://github.com/emlys/)
 * [@phargogh](https://github.com/phargogh/)
 
