@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [py==37]
-  number: 0
+  number: 1
   script_env:
     - NATCAP_INVEST_GDAL_LIB_PATH={{ CONDA_PREFIX }}/Library
   script:
@@ -34,7 +34,7 @@ requirements:
     - pip
     - babel
     - cython >3.0.0
-    - libgdal-core
+    - libgdal-core <3.11  # for compatibility with rasterio, which doesn't yet support gdal 3.11
     - numpy
     - setuptools_scm
     - setuptools >=77.0  # For PEP 639 license syntax update
