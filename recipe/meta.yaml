@@ -1,5 +1,5 @@
 {% set name = "natcap.invest" %}
-{% set version = "3.16.2" %}
+{% set version = "3.17.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace(".", "_") }}-{{ version }}.tar.gz
-  sha256: 11816023291d79fd65ba6f5117bf612547a12eefb4d186a3d45403dc0a6d64cc
+  sha256: 521e35ae56dca92369afdfd9b89c16855018226ae7676321932c5f872dc11835
 
 build:
   skip: true  # [py==37]
-  number: 1
+  number: 0
   script_env:
     - NATCAP_INVEST_GDAL_LIB_PATH={{ CONDA_PREFIX }}/Library
   script:
