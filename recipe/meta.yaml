@@ -1,5 +1,5 @@
 {% set name = "natcap.invest" %}
-{% set version = "3.17.1" %}
+{% set version = "3.17.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace(".", "_") }}-{{ version }}.tar.gz
-  sha256: 92500202b591d8b285add3f516aa8c13d010360429f889bcb8b9217f0c7bc3ce
+  sha256: d374b9759a0df782c0c59128cb92eb485b3ff3b87e5296987589e76e85db0d62
 
 build:
   skip: true  # [py==37]
@@ -47,6 +47,7 @@ requirements:
     - babel
     - chardet >=3.0.4
     - cython >3.0.0
+    - docutils
     - flask
     - flask-cors
     - geometamaker
