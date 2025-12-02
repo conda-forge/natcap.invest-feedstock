@@ -47,6 +47,7 @@ requirements:
     - babel
     - chardet >=3.0.4
     - cython >3.0.0
+    - docutils
     - flask
     - flask-cors
     - geometamaker
