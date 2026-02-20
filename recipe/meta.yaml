@@ -67,9 +67,14 @@ test:
     - natcap.invest
   requires:
     - pip
+    - make
+    - git
+    - git-lfs
+    - pytest
   commands:
     - pip check
     - invest list
+    - make test
 
 about:
   home: https://github.com/natcap/invest
