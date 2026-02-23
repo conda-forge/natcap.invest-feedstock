@@ -1,5 +1,5 @@
 {% set name = "natcap.invest" %}
-{% set version = "3.16.2" %}
+{% set version = "3.17.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace(".", "_") }}-{{ version }}.tar.gz
-  sha256: 11816023291d79fd65ba6f5117bf612547a12eefb4d186a3d45403dc0a6d64cc
+  sha256: d374b9759a0df782c0c59128cb92eb485b3ff3b87e5296987589e76e85db0d62
 
 build:
   skip: true  # [py==37]
@@ -34,7 +34,7 @@ requirements:
     - pip
     - babel
     - cython >3.0.0
-    - libgdal-core
+    - libgdal-core <3.11  # for compatibility with rasterio, which doesn't yet support gdal 3.11
     - numpy
     - setuptools_scm
     - setuptools >=77.0  # For PEP 639 license syntax update
@@ -47,6 +47,7 @@ requirements:
     - babel
     - chardet >=3.0.4
     - cython >3.0.0
+    - docutils
     - flask
     - flask-cors
     - geometamaker
@@ -54,7 +55,7 @@ requirements:
     - pandas >=1.2.1
     - pint
     - psutil >=5.6.6
-    - pygeoprocessing >=2.4.6
+    - pygeoprocessing >=2.4.6,<2.4.10
     - pyro5
     - requests
     - rtree >=0.8.2,!=0.9.1
