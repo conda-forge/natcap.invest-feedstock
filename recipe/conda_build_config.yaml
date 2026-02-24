@@ -1,5 +1,3 @@
-# When there is a new major GDAL version, add it to this list
-# Any GDAL versions in this list will be added to the build variants matrix.
 libgdal_version:
     - "3.9"
     - "3.10"
