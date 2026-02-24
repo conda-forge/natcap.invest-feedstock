@@ -58,7 +58,7 @@ requirements:
     - pint
     - psutil >=5.6.6
     - pygeoprocessing >=2.4.6,<2.4.10
-    - gdal >= 3.4.2
+    - gdal >=3.4.2
     - libgdal-core {{ libgdal }}  # run against the same version we build against.
     - pyro5
     - requests
