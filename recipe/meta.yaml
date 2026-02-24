@@ -10,8 +10,10 @@ source:
   sha256: d374b9759a0df782c0c59128cb92eb485b3ff3b87e5296987589e76e85db0d62
 
 build:
-  skip: true  # [py==37]
-  number: 1
+  skip:
+    - true  # [ py==37 ]
+    - true  # [ libgdal == "3.9" and py >= 314 ]
+  number: 2
   script_env:
     - NATCAP_INVEST_GDAL_LIB_PATH={{ CONDA_PREFIX }}/Library
   script:
@@ -34,7 +36,7 @@ requirements:
     - pip
     - babel
     - cython >3.0.0
-    - libgdal-core <3.11  # for compatibility with rasterio, which doesn't yet support gdal 3.11
+    - libgdal-core {{ libgdal }}
     - numpy
     - setuptools_scm
     - setuptools >=77.0  # For PEP 639 license syntax update
@@ -56,6 +58,8 @@ requirements:
     - pint
     - psutil >=5.6.6
     - pygeoprocessing >=2.4.6,<2.4.10
+    - gdal >=3.4.2
+    - libgdal-core {{ libgdal }}  # run against the same version we build against.
     - pyro5
     - requests
     - rtree >=0.8.2,!=0.9.1
