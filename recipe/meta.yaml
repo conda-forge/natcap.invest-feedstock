@@ -68,7 +68,7 @@ requirements:
     - taskgraph >=0.11.0
     - altair
     - fiona
-    - geopandas
+    - geopandas-base
     - jinja2
     - matplotlib-base
     - distinctipy
