@@ -70,7 +70,7 @@ requirements:
     - fiona
     - geopandas
     - jinja2
-    - matplotlib
+    - matplotlib-base
     - distinctipy
 
 test:
