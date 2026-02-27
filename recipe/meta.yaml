@@ -1,5 +1,5 @@
 {% set name = "natcap.invest" %}
-{% set version = "3.17.2" %}
+{% set version = "3.18.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace(".", "_") }}-{{ version }}.tar.gz
-  sha256: d374b9759a0df782c0c59128cb92eb485b3ff3b87e5296987589e76e85db0d62
+  sha256: 36f92d80590337a389b981ad2730d161b29d4f4116a9cb31cead75bf4835baf7
 
 build:
   skip:
     - true  # [ py==37 ]
     - true  # [ libgdal == "3.9" and py >= 314 ]
-  number: 2
+  number: 0
   script_env:
     - NATCAP_INVEST_GDAL_LIB_PATH={{ CONDA_PREFIX }}/Library
   script:
@@ -52,12 +52,12 @@ requirements:
     - docutils
     - flask
     - flask-cors
-    - geometamaker
+    - geometamaker >=0.2.1
     - numpy >=1.11.0,!=1.16.0
     - pandas >=1.2.1
     - pint
     - psutil >=5.6.6
-    - pygeoprocessing >=2.4.6,<2.4.10
+    - pygeoprocessing >=2.4.10
     - gdal >=3.4.2
     - libgdal-core {{ libgdal }}  # run against the same version we build against.
     - pyro5
@@ -66,6 +66,12 @@ requirements:
     - scipy >=1.9.0
     - shapely >=2.0.0
     - taskgraph >=0.11.0
+    - altair
+    - fiona
+    - geopandas-base
+    - jinja2
+    - matplotlib-base
+    - distinctipy
 
 test:
   imports:

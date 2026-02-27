@@ -960,6 +960,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@claire-simpson](https://github.com/claire-simpson/)
 * [@davemfish](https://github.com/davemfish/)
 * [@dcdenu4](https://github.com/dcdenu4/)
 * [@emlys](https://github.com/emlys/)
