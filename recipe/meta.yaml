@@ -13,7 +13,7 @@ build:
   skip:
     - true  # [ py==37 ]
     - true  # [ libgdal == "3.9" and py >= 314 ]
-  number: 0
+  number: 1
   script_env:
     - NATCAP_INVEST_GDAL_LIB_PATH={{ CONDA_PREFIX }}/Library
   script:
