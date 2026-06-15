@@ -37,8 +37,10 @@ requirements:
     - babel
     - cython >3.0.0
     - libgdal-core {{ libgdal }}
+    - libspatialindex
     - numpy
     - pygeoprocessing >=2.4.10
+    - rtree
     - setuptools_scm
     - setuptools >=77.0  # For PEP 639 license syntax update
     - wheel
