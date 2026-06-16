@@ -39,6 +39,7 @@ requirements:
     - libgdal-core {{ libgdal }}
     - numpy
     - pygeoprocessing >=2.4.10
+    - rtree <1.4.0  #  when they stopped doing platform-specific conda-forge builds
     - setuptools_scm
     - setuptools >=77.0  # For PEP 639 license syntax update
     - wheel
@@ -62,7 +63,7 @@ requirements:
     - libgdal-core {{ libgdal }}  # run against the same version we build against.
     - pyro5
     - requests
-    - rtree >=0.8.2,!=0.9.1
+    - rtree >=0.8.2,!=0.9.1,<1.4.0
     - scipy >=1.9.0
     - shapely >=2.0.0
     - taskgraph >=0.11.0
