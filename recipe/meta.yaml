@@ -10,11 +10,8 @@ source:
   sha256: 95fb4ce2c19b520edd40b37b561ccd220a6aeb46abaf399b609e828c2c3ea3f7
 
 build:
-  skip: true  # [ py==37 ]
   skip: true  # [ libgdal == "3.9" and py >= 314 ]
-  skip: true  # [linux-aarch64]
-  skip: true  # [linux-ppc64le]
-  skip: true  # [osx-arm64]
+  skip: true  # [linux-aarch64 or linux-ppc64le or osx-arm64]
   number: 0
   script_env:
     - NATCAP_INVEST_GDAL_LIB_PATH={{ CONDA_PREFIX }}/Library
