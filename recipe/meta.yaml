@@ -13,6 +13,9 @@ build:
   skip:
     - true  # [ py==37 ]
     - true  # [ libgdal == "3.9" and py >= 314 ]
+    - linux_aarch64
+    - linux_ppc64le
+    - osx_arm64
   number: 0
   script_env:
     - NATCAP_INVEST_GDAL_LIB_PATH={{ CONDA_PREFIX }}/Library
