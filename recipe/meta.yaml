@@ -15,8 +15,8 @@ build:
     - NATCAP_INVEST_GDAL_LIB_PATH={{ CONDA_PREFIX }}/Library
     - SPATIALINDEX_C_LIBRARY={{ CONDA_PREFIX }}/lib  # help rtree find libspatialindex
   script:
-    - {{ PYTHON }} -m build --wheel --no-isolation -x
-    - {{ PYTHON }} -m build --sdist --no-isolation -x
+    - {{ PYTHON }} -m build --wheel --no-isolation
+    - {{ PYTHON }} -m build --sdist --no-isolation --skip-dependency-check
     - {{ PYTHON }} -m pip install --no-deps --no-index --only-binary natcap.invest --find-links=dist "natcap.invest=={{ version }}"
   entry_points:
     - invest = natcap.invest.cli:main
