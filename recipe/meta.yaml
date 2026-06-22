@@ -60,6 +60,7 @@ requirements:
     - pyro5
     - requests
     - rtree >=0.8.2,!=0.9.1
+    - libspatialindex  # should be implicit but perhaps needed to address import issues on some architectures
     - scipy >=1.9.0
     - shapely >=2.0.0
     - taskgraph >=0.11.0
