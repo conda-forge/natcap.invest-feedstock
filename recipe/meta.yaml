@@ -1,3 +1,4 @@
+---
 {% set name = "natcap.invest" %}
 {% set version = "3.20.0" %}
 
@@ -61,6 +62,7 @@ requirements:
     - pyro5
     - requests
     - rtree >=0.8.2,!=0.9.1
+    - rtree <1.4.1  # [aarch64 or ppc64le or (osx and arm64)]
     - scipy >=1.9.0
     - shapely >=2.0.0
     - taskgraph >=0.11.0
