@@ -14,7 +14,7 @@ build:
   number: 1
   script_env:
     - NATCAP_INVEST_GDAL_LIB_PATH={{ CONDA_PREFIX }}/Library
-    - SPATIALINDEX_C_LIBRARY={{ CONDA_PREFIX }}/lib  # help rtree find libspatialindex
+    - SPATIALINDEX_C_LIBRARY={{ CONDA_PREFIX }}/lib
   script:
     - {{ PYTHON }} -m build --wheel --no-isolation
     - {{ PYTHON }} -m build --sdist --no-isolation --skip-dependency-check
@@ -30,6 +30,9 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
+    - libspatialindex  2.1.0 h57eeb1c_0  # [osx and arm64]
+    - libspatialindex  2.1.0 hd7870d2_0  # [aarch64]
+    - libspatialindex  2.1.0 h52e4983_0  # [ppc64le]
   host:
     - python
     - pip
