@@ -14,8 +14,8 @@ build:
   number: 1
   script_env:
     - NATCAP_INVEST_GDAL_LIB_PATH={{ CONDA_PREFIX }}/Library
-    - SPATIALINDEX_C_LIBRARY={{ BUILD_PREFIX }}/lib/libspatialindex_c.so  # [linux]
-    - SPATIALINDEX_C_LIBRARY={{ BUILD_PREFIX }}/lib/libspatialindex_c.dylib  # [osx]
+    - SPATIALINDEX_C_LIBRARY={{ BUILD_PREFIX }}/venv/lib/libspatialindex_c.so  # [linux]
+    - SPATIALINDEX_C_LIBRARY={{ BUILD_PREFIX }}/venv/lib/libspatialindex_c.dylib  # [osx]
   script:
     #- ldconfig  # [linux or osx]
     - find {{ BUILD_PREFIX }} -name "libspatialindex_c.*"  # [linux or osx]
