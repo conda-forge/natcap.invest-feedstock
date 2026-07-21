@@ -18,12 +18,12 @@ build:
     - SPATIALINDEX_C_LIBRARY={{ BUILD_PREFIX }}/venv/lib/libspatialindex_c.so  # [linux]
     - SPATIALINDEX_C_LIBRARY={{ BUILD_PREFIX }}/venv/lib/libspatialindex_c.dylib  # [osx]
   script:
-    #- ldconfig  # [linux or osx]
-    - find {{ BUILD_PREFIX }} -name "libspatialindex_c.*"  # [linux or osx]
-    - {{ PYTHON }} -m build --wheel --no-isolation -vv
-    - {{ PYTHON }} -m build --sdist --no-isolation --skip-dependency-check -vv
-    - {{ PYTHON }} -m pip install --no-deps --no-index --only-binary natcap.invest --no-build-isolation --find-links=dist "natcap.invest=={{ version }}"
-    #- {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
+    #- find {{ BUILD_PREFIX }} -name "libspatialindex_c.*"  # [linux or osx]
+    #- {{ PYTHON }} -m build --wheel --no-isolation -vv
+    #- {{ PYTHON }} -m build --sdist --no-isolation --skip-dependency-check -vv
+    #- {{ PYTHON }} -m pip install --no-deps --no-index --only-binary natcap.invest --no-build-isolation --find-links=dist "natcap.invest=={{ version }}"
+    - {{ PYTHON }} setup.py build_ext --inplace
+    - {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
   entry_points:
     - invest = natcap.invest.cli:main
 
