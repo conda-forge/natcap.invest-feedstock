@@ -17,10 +17,11 @@ build:
     - SPATIALINDEX_C_LIBRARY={{ CONDA_PREFIX }}/lib/libspatialindex_c.so  # [linux]
     - SPATIALINDEX_C_LIBRARY={{ CONDA_PREFIX }}/lib/libspatialindex_c.dylib  # [osx]
   script:
-    #- {{ PYTHON }} -m build --wheel --no-isolation
-    #- {{ PYTHON }} -m build --sdist --no-isolation --skip-dependency-check
-    #- {{ PYTHON }} -m pip install --no-deps --no-index --only-binary natcap.invest --find-links=dist "natcap.invest=={{ version }}"
-    - {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
+    - ldconfig  # [linux or osx]
+    - {{ PYTHON }} -m build --wheel --no-isolation
+    - {{ PYTHON }} -m build --sdist --no-isolation --skip-dependency-check
+    - {{ PYTHON }} -m pip install --no-deps --no-index --only-binary natcap.invest --find-links=dist "natcap.invest=={{ version }}"
+    #- {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
   entry_points:
     - invest = natcap.invest.cli:main
 
