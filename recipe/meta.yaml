@@ -14,7 +14,7 @@ source:
 
 build:
   number: 1
-  skip: True  # [py==314 and libgdal==3.9]
+  skip: True  # [py==314 and libgdal=="3.9"]
   script_env:
     - NATCAP_INVEST_GDAL_LIB_PATH={{ CONDA_PREFIX }}/Library
     #- SPATIALINDEX_C_LIBRARY={{ BUILD_PREFIX }}/venv/lib/libspatialindex_c.so  # [linux]
