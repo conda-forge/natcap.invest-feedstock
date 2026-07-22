@@ -17,10 +17,9 @@ build:
   skip: True  # [match(python, ">=3.14") and match(libgdal_core, "<=3.9")]
   script_env:
     - NATCAP_INVEST_GDAL_LIB_PATH={{ CONDA_PREFIX }}/Library
-    - SPATIALINDEX_C_LIBRARY={{ BUILD_PREFIX }}/venv/lib/libspatialindex_c.so  # [linux]
-    - SPATIALINDEX_C_LIBRARY={{ BUILD_PREFIX }}/venv/lib/libspatialindex_c.dylib  # [osx]
+    #- SPATIALINDEX_C_LIBRARY={{ BUILD_PREFIX }}/venv/lib/libspatialindex_c.so  # [linux]
+    #- SPATIALINDEX_C_LIBRARY={{ BUILD_PREFIX }}/venv/lib/libspatialindex_c.dylib  # [osx]
   script:
-    #- find {{ BUILD_PREFIX }} -name "libspatialindex_c.*"  # [linux or osx]
     #- {{ PYTHON }} -m build --wheel --no-isolation -vv
     #- {{ PYTHON }} -m build --sdist --no-isolation --skip-dependency-check -vv
     #- {{ PYTHON }} -m pip install --no-deps --no-index --only-binary natcap.invest --no-build-isolation --find-links=dist "natcap.invest=={{ version }}"
