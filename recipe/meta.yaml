@@ -17,14 +17,10 @@ build:
   skip: True  # [py==314 and libgdal=="3.9"]
   script_env:
     - NATCAP_INVEST_GDAL_LIB_PATH={{ CONDA_PREFIX }}/Library
-    #- SPATIALINDEX_C_LIBRARY={{ BUILD_PREFIX }}/venv/lib/libspatialindex_c.so  # [linux]
-    #- SPATIALINDEX_C_LIBRARY={{ BUILD_PREFIX }}/venv/lib/libspatialindex_c.dylib  # [osx]
   script:
-    - {{ PYTHON }} -m build --wheel --no-isolation -vv
+    - {{ PYTHON }} -m build --wheel --no-isolation --skip-dependency-check -vv
     - {{ PYTHON }} -m build --sdist --no-isolation --skip-dependency-check -vv
     - {{ PYTHON }} -m pip install --no-deps --no-index --only-binary natcap.invest --no-build-isolation --find-links=dist "natcap.invest=={{ version }}"
-    #- {{ PYTHON }} setup.py build_ext --inplace
-    #- {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
   entry_points:
     - invest = natcap.invest.cli:main
 
@@ -49,7 +45,6 @@ requirements:
     - wheel
     - python-build
     - rtree >=0.8.2,!=0.9.1
-    - libspatialindex
   run:
     - python
     - libsqlite !=3.49.1  # https://github.com/conda-forge/sqlite-feedstock/issues/130
