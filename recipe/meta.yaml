@@ -1,3 +1,4 @@
+---
 {% set name = "natcap.invest" %}
 {% set version = "3.20.0" %}
 
@@ -8,16 +9,18 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace(".", "_") }}-{{ version }}.tar.gz
   sha256: 95fb4ce2c19b520edd40b37b561ccd220a6aeb46abaf399b609e828c2c3ea3f7
+  patches:
+    - 3.20-pygeoprocessing-crosscompile.patch
 
 build:
-  skip: true  # [aarch64 or ppc64le or (osx and arm64)]
-  number: 0
+  number: 1
+  skip: True  # [py==314 and libgdal=="3.9"]
   script_env:
     - NATCAP_INVEST_GDAL_LIB_PATH={{ CONDA_PREFIX }}/Library
   script:
-    - {{ PYTHON }} -m build --wheel --no-isolation -x
-    - {{ PYTHON }} -m build --sdist --no-isolation -x
-    - {{ PYTHON }} -m pip install --no-deps --no-index --only-binary natcap.invest --find-links=dist "natcap.invest=={{ version }}"
+    - {{ PYTHON }} -m build --wheel --no-isolation --skip-dependency-check -vv
+    - {{ PYTHON }} -m build --sdist --no-isolation --skip-dependency-check -vv
+    - {{ PYTHON }} -m pip install --no-deps --no-index --only-binary natcap.invest --no-build-isolation --find-links=dist "natcap.invest=={{ version }}"
   entry_points:
     - invest = natcap.invest.cli:main
 
@@ -41,6 +44,7 @@ requirements:
     - setuptools >=77.0  # For PEP 639 license syntax update
     - wheel
     - python-build
+    - rtree >=0.8.2,!=0.9.1
   run:
     - python
     - libsqlite !=3.49.1  # https://github.com/conda-forge/sqlite-feedstock/issues/130
