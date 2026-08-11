@@ -8,8 +8,6 @@ cxx_compiler:
 - vs2022
 libgdal:
 - '3.10'
-libspatialindex:
-- 2.1.0
 numpy:
 - '2'
 pin_run_as_build:
