@@ -1,20 +1,19 @@
----
 {% set name = "natcap.invest" %}
-{% set version = "3.20.0" %}
+{% set version = "3.20.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace(".", "_") }}-{{ version }}.tar.gz
-  sha256: 95fb4ce2c19b520edd40b37b561ccd220a6aeb46abaf399b609e828c2c3ea3f7
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace(".", "_") }}-{{ version }}.tar.gz
+  sha256: ac12039037cd55b931b525abd92def7c749b372c8c9d9400a2c8e64ce9f5433f
   patches:
     - 3.20-pygeoprocessing-crosscompile.patch
 
 build:
-  number: 1
-  skip: True  # [py==314 and libgdal=="3.9"]
+  number: 0
+  skip: true  # [py==314 and libgdal=="3.9"]
   script_env:
     - NATCAP_INVEST_GDAL_LIB_PATH={{ CONDA_PREFIX }}/Library
   script:
