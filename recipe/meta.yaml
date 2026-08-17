@@ -8,8 +8,6 @@ package:
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace(".", "_") }}-{{ version }}.tar.gz
   sha256: ac12039037cd55b931b525abd92def7c749b372c8c9d9400a2c8e64ce9f5433f
-  patches:
-    - 3.20-pygeoprocessing-crosscompile.patch
 
 build:
   number: 0
