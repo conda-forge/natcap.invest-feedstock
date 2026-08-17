@@ -17,7 +17,7 @@ build:
   script:
     # Force re-cythonization by deleting any existing cython files.
     # Re-cythonization needed because of varying numpy ABIs in conda-forge matrix.
-    - {{ PYTHON }} -c "from pathlib import Path; [f.unlink() for f in Path(os.environ['PREFIX']).rglob('*.cpp')]"
+    - {{ PYTHON }} -c "import os; from pathlib import Path; [f.unlink() for f in Path(os.environ['PREFIX']).rglob('*.cpp')]"
     - {{ PYTHON }} -m build --wheel --no-isolation --skip-dependency-check -vv
     - {{ PYTHON }} -m build --sdist --no-isolation --skip-dependency-check -vv
     - {{ PYTHON }} -m pip install --no-deps --no-index --only-binary natcap.invest --no-build-isolation --find-links=dist "natcap.invest=={{ version }}"
