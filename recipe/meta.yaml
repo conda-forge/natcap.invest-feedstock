@@ -1,5 +1,5 @@
 {% set name = "natcap.invest" %}
-{% set version = "3.20.1" %}
+{% set version = "3.20.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace(".", "_") }}-{{ version }}.tar.gz
-  sha256: ac12039037cd55b931b525abd92def7c749b372c8c9d9400a2c8e64ce9f5433f
+  sha256: 18d9adc30f729325b8cc47dc4281c9ed4835a1053c718547c70c19c796eedf2f
 
 build:
   number: 0
