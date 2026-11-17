@@ -3,20 +3,22 @@ About natcap.invest-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/natcap.invest-feedstock/blob/main/LICENSE.txt)
 
-Home: <https://github.com/natcap/invest>
+Home: https://github.com/natcap/invest
 
 Package license: Apache-2.0
 
 Summary: InVEST: models that map and value the goods and services from nature that sustain and fulfill human life.
 
-Development: <https://github.com/natcap/invest>
+Development: https://github.com/natcap/invest
 
-Documentation: <https://invest.readthedocs.io/>
+Documentation: https://invest.readthedocs.io/
 
 InVEST (Integrated Valuation of Ecosystem Services and Tradeoffs) is a family of tools for quantifying the values of natural capital in clear, credible, and practical ways. In promising a return (of societal benefits) on investments in nature, the scientific community needs to deliver knowledge and tools to quantify and forecast this return. InVEST enables decision-makers to quantify the importance of natural capital, to assess the tradeoffs associated with alternative choices, and to integrate conservation and human development.
 
+
 Current build status
 ====================
+
 
 <table><tr>
     <td>GitHub Actions</td>
@@ -26,7 +28,7 @@ Current build status
       </a>
     </td>
   </tr>
-
+    
   <tr>
     <td>Azure</td>
     <td>
@@ -120,6 +122,34 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_libgdal3.12python3.14.____cp314" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_libgdal3.13python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_libgdal3.13python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_libgdal3.13python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_libgdal3.13python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_libgdal3.13python3.13.____cp313</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_libgdal3.13python3.13.____cp313" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_libgdal3.13python3.14.____cp314</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_libgdal3.13python3.14.____cp314" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -249,6 +279,8 @@ mamba repoquery depends natcap.invest --channel conda-forge
 
 </details>
 
+
+
 About conda-forge
 =================
 
@@ -287,6 +319,7 @@ Terminology
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
 
+
 Updating natcap.invest-feedstock
 ================================
 
@@ -303,10 +336,9 @@ on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
-
-* If the version of a package **is not** being increased, please add or increase
+ * If the version of a package **is not** being increased, please add or increase
    the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
-* If the version of a package **is** being increased, please remember to return
+ * If the version of a package **is** being increased, please remember to return
    the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
@@ -318,3 +350,4 @@ Feedstock Maintainers
 * [@dcdenu4](https://github.com/dcdenu4/)
 * [@emlys](https://github.com/emlys/)
 * [@phargogh](https://github.com/phargogh/)
+
