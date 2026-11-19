@@ -173,6 +173,139 @@ Current build status
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_libgdal3.9python3.13.____cp313" alt="variant">
                 </a>
               </td>
+            </tr><tr>
+              <td>osx_arm64_libgdal3.10python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libgdal3.10python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_libgdal3.10python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libgdal3.10python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_libgdal3.10python3.13.____cp313</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libgdal3.10python3.13.____cp313" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_libgdal3.10python3.14.____cp314</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libgdal3.10python3.14.____cp314" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_libgdal3.11python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libgdal3.11python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_libgdal3.11python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libgdal3.11python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_libgdal3.11python3.13.____cp313</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libgdal3.11python3.13.____cp313" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_libgdal3.11python3.14.____cp314</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libgdal3.11python3.14.____cp314" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_libgdal3.12python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libgdal3.12python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_libgdal3.12python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libgdal3.12python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_libgdal3.12python3.13.____cp313</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libgdal3.12python3.13.____cp313" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_libgdal3.12python3.14.____cp314</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libgdal3.12python3.14.____cp314" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_libgdal3.13python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libgdal3.13python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_libgdal3.13python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libgdal3.13python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_libgdal3.13python3.13.____cp313</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libgdal3.13python3.13.____cp313" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_libgdal3.13python3.14.____cp314</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libgdal3.13python3.14.____cp314" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_libgdal3.9python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libgdal3.9python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_libgdal3.9python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libgdal3.9python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_libgdal3.9python3.13.____cp313</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15217&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/natcap.invest-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libgdal3.9python3.13.____cp313" alt="variant">
+                </a>
+              </td>
             </tr>
           </tbody>
         </table>
